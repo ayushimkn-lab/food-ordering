@@ -1,252 +1,302 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Roboto",sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
-/* ================= VARIABLES ================= */
-:root{
-    --red:red;
-    --black:#212121;
-    --gray:gray;
-    --white:#fff;
-    --bg:palegoldenrod;
+/* CSS VARIABLES */
+:root {
+    --lead: #212121;
+    --bonn: #FFD700;
+    --leg: #FFFDF7;
+    --ayu: #FCF1CC;
+    --pure-white: #FFF;
 }
 
-/* ================= COMMON ================= */
-body{background:#fff;}
-a{text-decoration:none;color:black;font-size:1.1rem;}
-li{list-style:none;}
-img{max-width:100%;display:block;}
-.flex{display:flex;align-items:center;}
-.between{justify-content:space-between;}
-.wrapper{
-    max-width:1400px;
-    margin:auto;
-    padding:0 1.5rem;
-}
-.text-center{text-align:center;}
-.btn{
-    padding:.9rem 2rem;
-    background:red;
-    color:white;
-    border-radius:1rem;
-    transition:.3s;
-}
-.btn:hover{background:black;color:white;}
-
-/* ================= NAVBAR ================= */
-.navbar{min-height:14vh;}
-.logo{
-    font-size:2rem;
-    font-weight:bold;
-    color:red;
-}
-.navlist{
-    display:flex;
-    gap:3rem;
-    justify-content:center;
-}
-.desktop-action{
-    display:flex;
-    gap:2rem;
-    justify-content:flex-end;
-}
-.cart-icon{
-    font-size:1.3rem;
-    position:relative;
-}
-.cart-value{
-    position:absolute;
-    top:-6px;
-    right:-10px;
-    width:20px;
-    height:20px;
-    background:red;
-    color:white;
-    border-radius:50%;
-    font-size:.8rem;
-    text-align:center;
-    line-height:20px;
-}
-.hamburger{display:none;font-size:1.6rem;}
-.mobile-menu{display:none;}
-
-/* ================= HERO ================= */
-.hero-section{
-    min-height:calc(100vh - 14vh);
-}
-.hero-section .content,
-.hero-section .image-container{flex:1;}
-h1{
-    font-size:5.5vw;
-    color:black;
-}
-h1 span{color:red;}
-p{
-    font-size:1.2rem;
-    color:gray;
-    line-height:1.7rem;
-}
-.para{margin:2rem 0;max-width:550px;}
-
-/* ================= SECTION HEADING ================= */
-.section-heading{
-    margin:4rem 0;
-    text-align:center;
-}
-.section-heading h5{
-    color:red;
-    letter-spacing:.2rem;
-}
-.section-heading h2{
-    font-size:3.6rem;
+body {
+    background: white;
 }
 
-/* ================= SERVICES ================= */
-.services{
-    display:flex;
-    justify-content:center;
-    gap:2rem;
-    flex-wrap:wrap;
-    margin-bottom:4rem;
-}
-.Service-card{
-    width:300px;
-    background:#fff;
-    padding:1.5rem;
-    border-radius:1rem;
-    text-align:center;
-}
-.Service-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-.Service-card h3{margin:1rem 0 .5rem;}
-.Service-card p{font-size:1rem;}
-
-/* ================= MENU ================= */
-.menu-heading-wrapper{text-align:center;margin-bottom:2rem;}
-.card-list{
-    display:flex;
-    justify-content:center;
-    gap:2rem;
-    flex-wrap:wrap;
-}
-.order-card{
-    width:260px;
-    background:white;
-    padding:1rem;
-    border-radius:1rem;
-    text-align:center;
-    box-shadow:0 4px 6px rgba(0,0,0,.05);
-}
-.order-card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    border-radius:8px;
-}
-.order-card h4{margin:.7rem 0;}
-.price{
-    color:red;
-    font-size:1.6rem;
-    margin:1rem 0;
+/* Header Styling */
+a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: black;
 }
 
-/* ================= CART ================= */
-.cart-tab{
-    position:fixed;
-    inset:0 -420px 0 auto;
-    width:25rem;
-    background:var(--bg);
-    padding:1rem;
-    transition:.3s;
-    z-index:99;
-    display:flex;
-    flex-direction:column;
-}
-.cart-tab-active{inset:0 0 0 auto;}
-.cart-list{
-    flex:1;
-    overflow-y:auto;
-    margin:1rem 0;
-}
-.item{
-    display:flex;
-    gap:1rem;
-    margin-bottom:1rem;
-}
-.item img{
-    width:60px;
-    height:60px;
-    object-fit:cover;
-}
-.quantity-btn{
-    width:1.6rem;
-    height:1.6rem;
-    background:black;
-    color:white;
-    border-radius:50%;
-    text-align:center;
-    line-height:1.6rem;
-}
-.total-container{
-    background:red;
-    color:white;
-    padding:1rem;
-    text-align:center;
+.flex {
+    display: flex;
+    align-items: center;
 }
 
-/* ================= REVIEW / SWIPER ================= */
-.mySwiper{width:100%;}
-.review-container{max-width:650px;margin:auto;}
-.profile{
-    width:4rem;
-    height:4rem;
-    border-radius:50%;
-    overflow:hidden;
+li {
+    list-style: none;
 }
-.profile img{width:100%;height:100%;object-fit:cover;}
-.fa-star{color:gold;}
 
-/* ================= APP ================= */
-.app-container{
-    background:var(--bg);
-    padding:3rem 6rem;
-    border-radius:3rem;
-    display:flex;
-    gap:2rem;
+.between {
+    justify-content: space-between;
 }
-.app-container img{width:25rem;}
 
-/* ================= FOOTER ================= */
-.footer-container{
-    background:var(--bg);
-    padding:4rem 0;
-    margin-top:6rem;
+.gap-2 {
+    gap: 2rem;
 }
-.footer-flex{
-    display:flex;
-    justify-content:space-between;
-}
-.footer-left{width:60%;}
-.footer-right{width:30%;}
-.footer-link{
-    color:gray;
-    transition:.3s;
-}
-.footer-link:hover{color:black;}
 
-/* ================= RESPONSIVE ================= */
-@media(max-width:780px){
-    .navlist,.desktop-action .btn{display:none;}
-    .hamburger{display:block;}
-    h1{font-size:3rem;}
-    .section-heading h2{font-size:2.5rem;}
-    .app-container{flex-direction:column;padding:2rem;}
+.gap-3 {
+    gap: 3rem;
+}
+
+.navbar {
+    min-height: 14vh;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: auto;
+    padding-inline: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+    flex: 1;
+}
+
+/* CENTER NAV MENU */
+.navlist {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* RIGHT ACTION */
+.desktop-action {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.btn {
+    display: inline-block;
+    padding: .9rem 2rem;
+    background-color: red;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    color: var(--ayu);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 1px;
+    transition: .3s ease-in-out;
+}
+
+.btn:hover {
+    background: black;
+    color: white;
+}
+
+.cart-icon {
+    color: black;
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.cart-icon .cart-value {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    font-size: .85rem;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    background-color: red;
+    color: black;
+    text-align: center;
+    line-height: 20px;
+}
+
+.desktop-action .hamburger {
+    font-size: 1.5rem;
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.p-top {
+    padding-top: 10rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: calc(100vh - 14vh);
+}
+
+.content,
+.image-container {
+    flex: 1;
+}
+
+h1 {
+    font-size: 5.6vw;
+    color: black;
+}
+
+h1 span {
+    color: red;
+}
+
+p {
+    font-size: 1.25rem;
+    color: gray;
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+
+.para {
+    margin-block: 2rem;
+    max-width: 550px;
+}
+
+/* =================== OUR SERVICES =================== */
+.section-heading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.section-heading h5 {
+    font-size: 1.6rem;
+    letter-spacing: .2rem;
+    color: red;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-size: 3.7rem;
+}
+
+/* =================== SERVICES =================== */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.Service-card {
+    background-color: var(--leg);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    max-width: 320px;
+}
+
+.Service-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* =================== MENU =================== */
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.order-card {
+    width: 280px;
+    background: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.order-card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.price {
+    color: red;
+}
+
+/* =================== CART =================== */
+.cart-tab {
+    position: fixed;
+    inset: 0 -500px 0 auto;
+    width: 25rem;
+    background: palegoldenrod;
+    padding: 1rem;
+    transition: .3s ease-in-out;
+}
+
+.cart-tab-active {
+    inset: 0 0 0 auto;
+}
+
+.cart-list {
+    overflow-y: auto;
+    max-height: 350px;
+}
+
+.item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.quantity-btn {
+    background: black;
+    color: white;
+    border-radius: 50%;
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+/* =================== FOOTER =================== */
+.footer-container {
+    background: palegoldenrod;
+    padding: 4rem 0;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* =================== RESPONSIVE =================== */
+@media screen and (max-width: 780px) {
+    .navlist {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
 }
